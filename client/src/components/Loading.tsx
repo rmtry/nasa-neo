@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
-import { getIsAppLoading } from "../selectors/app-settings-selectors";
+import { getIsAppLoading } from "../store/selectors/app-settings-selectors";
 
 const Loading = () => {
   const isLoading = useSelector(getIsAppLoading);
   return (
     <div
       style={{
-        position: "absolute",
+        position: "fixed",
         top: 0,
         left: 0,
         width: "100vw",
@@ -18,7 +18,9 @@ const Loading = () => {
         display: isLoading ? "flex" : "none",
       }}
     >
-      <p style={{ color: "black" }}>Loading... (longer date might take more time)</p>
+      <p style={{ color: "black" }}>
+        Loading... (longer date might take more time)
+      </p>
     </div>
   );
 };

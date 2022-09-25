@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import Loading from "./store/components/Loading";
+import Loading from "./components/Loading";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import TextField from "@mui/material/TextField";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
@@ -115,7 +115,7 @@ function App() {
       <div
         style={{
           width: "100%",
-          height: "50vh",
+          height: "50%",
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -185,6 +185,8 @@ function App() {
         )}
       </div>
 
+      <div style={{ height: "2rem" }} />
+
       <div>
         <LocalizationProvider dateAdapter={AdapterMoment}>
           <MobileDatePicker
@@ -216,6 +218,8 @@ function App() {
       >
         Find
       </Button>
+
+      <div style={{ height: "2rem" }} />
 
       <Loading />
     </div>
